@@ -56,7 +56,7 @@ Docker compose is the easiest way to run this. If not you will have to setup the
 ### Method 1 - Using Docker
 1. Clone the repository using 
    ```sh
-   git clone https://github.com/sudharsan-007/Tabular-q-learning-pendulum.git
+   git clone https://github.com/sudharsan-007/newsletter_app.git
    ```
 
 2. Run docker-compose 
