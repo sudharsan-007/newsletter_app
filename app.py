@@ -4,6 +4,7 @@ from mysql.connector import Error
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 from utils import plot_source_distribution, plot_source_pie_chart, plot_frequency_histogram
 # Set the aesthetics for seaborn plots
@@ -13,8 +14,16 @@ sns.set_theme(style="whitegrid")
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'Ras123berry',
+    'password': '**********',
     'database': 'newsletter_app'
+}
+
+# Database config for docker file
+db_config = {
+    'host': os.getenv('DATABASE_HOST', 'localhost'),
+    'user': os.getenv('DATABASE_USER', 'root'),
+    'password': os.getenv('DATABASE_PASSWORD', 'password'),
+    'database': os.getenv('DATABASE_DB', 'mydatabase')
 }
 
 # Connect to MySQL database
